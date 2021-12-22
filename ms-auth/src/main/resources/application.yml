@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ms-auth
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: none
+server:
+  port: 8082

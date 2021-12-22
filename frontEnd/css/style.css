@@ -1,0 +1,1473 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    font-family: Helvetica, Sans-Serif;
+}
+
+.product-1, .product-2, .product, .product-3, .cart {
+    display: block;
+    min-height: 80vh;
+    margin-top: 0px;
+    padding-bottom: 100px;
+    background-size: auto;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+.container-nike, .container-adidas, .container, .cart-container, .container-puma {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 3rem;
+    width: 90%;
+    margin: 0 auto;
+    background-color: rgba(201, 216, 231, 0.2);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+@media screen and (max-width: 1370px) {
+    .container-nike, .container-adidas, .container, .cart-container, .container-puma {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 5rem;
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .container-nike, .container-adidas, .container, .cart-container, .container-puma {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 4rem;
+        width: 100%;
+    }
+
+    .product-1, .product-2, .product, .product-3 {
+        margin: 0 auto;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .container-nike, .container-adidas, .container, .cart-container, .container-puma {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 1fr;
+        grid-gap: 4rem;
+        width: 100%;
+        padding: 3rem 2rem;
+    }
+
+    .card {
+        max-width: calc(100vw - 4rem);
+    }
+}
+
+.container-puma .card, .container-nike .card, .container-adidas .card, .container .card, .cart-container .card {
+    position: relative;
+    width: 290px;
+    height: 370px;
+    background: #232323;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-left: 0;
+}
+
+.container-puma .card:before, .container-nike .card:before, .container-adidas .card:before, .container .card:before, .cart-container .card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+}
+
+.container-puma .card:hover:before, .container-nike .card:hover:before, .container-adidas .card:hover:before, .container .card:hover:before, .cart-container .card:hover:before {
+    clip-path: circle(300px at 80% -20%);
+}
+
+.product-1 .container-nike .card:after {
+    content: 'Nike';
+    position: absolute;
+    top: 50%;
+    left: -15%;
+    font-size: 10em;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(247, 247, 247, 0.05)
+}
+
+.product-2 .container-adidas .card:after {
+    content: 'Adidas';
+    position: absolute;
+    top: 50%;
+    left: -15%;
+    font-size: 10em;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(247, 247, 247, 0.05)
+}
+
+.product .container-adidas .card:after {
+    content: 'Store';
+    position: absolute;
+    top: 50%;
+    left: -15%;
+    font-size: 10em;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(247, 247, 247, 0.05)
+}
+
+.product-3 .container-puma .card:after {
+    content: 'Puma';
+    position: absolute;
+    top: 50%;
+    left: -15%;
+    font-size: 10em;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(247, 247, 247, 0.05)
+}
+
+
+.container-puma .card .imgBx, .container-nike .card .imgBx, .container-adidas .card .imgBx, .container .card .imgBx, .cart-container .card .imgBx {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10000;
+    width: 100%;
+    height: 220px;
+    transition: 0.5s;
+}
+
+.container-puma .card:hover .imgBx, .container-nike .card:hover .imgBx, .container-adidas .card:hover .imgBx, .container .card:hover .imgBx, .cart-container .card:hover .imgBx {
+    top: 0%;
+    transform: translateY(0%);
+
+}
+
+.container-puma .card .imgBx img, .container-nike .card .imgBx img, .container-adidas .card .imgBx img, .container .card .imgBx img, .cart-container .card .imgBx img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%) rotate(-25deg);
+    width: 230px;
+}
+
+.container-puma .card .contentBx, .container-nike .card .contentBx, .container-adidas .card .contentBx, .container .card .contentBx, .cart-container .card .contentBx {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 95px;
+    text-align: center;
+    transition: 0.5s;
+    z-index: 10;
+    padding-top: 54px;
+}
+
+.container-puma .card:hover .contentBx, .container-nike .card:hover .contentBx, .container-adidas .card:hover .contentBx, .container .card:hover .contentBx, .cart-container .card:hover .contentBx {
+    height: 200px;
+}
+
+.container-puma .card .contentBx h2, .container-nike .card .contentBx h2, .container-adidas .card .contentBx h2, .container .card .contentBx h2, .cart-container .card .contentBx h2 {
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 0px;
+    color: #fff;
+    margin: -3px;
+}
+
+.container-puma .card .contentBx .size, .container-nike .card .contentBx .size, .container .card .contentBx .price, .container-adidas .card .contentBx .size, .container .card .contentBx .price, .cart-container .card .contentBx .price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.2s;
+    opacity: 0;
+    visibility: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 35px;
+}
+
+.container-puma .card:hover .contentBx .size, .container-nike .card:hover .contentBx .size, .container-adidas .card:hover .contentBx .size, .container .card:hover .contentBx .size, .cart-container .card:hover .contentBx .size {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.2s;
+}
+
+.container-puma .card:hover .contentBx .price, .cart-container-nike .card:hover .contentBx .price, .cart-container-adidas .card:hover .contentBx .price, .container .card:hover .contentBx .price, .cart-container .card:hover .contentBx .price {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.2s;
+}
+
+.container-puma .card .contentBx .size h3, .cart-container-nike .card .contentBx .size h3, .container .card .contentBx .price h3, .cart-container-adidas .card .contentBx .size h3, .container .card .contentBx .price h3, .cart-container .card .contentBx .price h3 {
+    color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: -1px;
+}
+
+.container-puma .card .contentBx .size span, .cart-container-nike .card .contentBx .size span, .cart-container-adidas .card .contentBx .size span, .container .card .contentBx .size span, .cart-container .card .contentBx .size span {
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    display: inline-block;
+    color: #111;
+    background: #fff;
+    margin: 0 5px;
+    transition: 0.2s;
+    color: #111;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.container-puma card .contentBx .size span:hover, .cart-container-nike card .contentBx .size span:hover, .cart-container-adidas .card .contentBx .size span:hover, .container .card .contentBx .size span:hover, .cart-container .card .contentBx .size span:hover {
+    background: #9bdc28;
+}
+
+.container-puma .card .contentBx .price span, .cart-container-nike .card .contentBx .price span, .cart-container-adidas .card .contentBx .price span, .container .card .contentBx .price span, .cart-container .card .contentBx .price span {
+    width: 36px;
+    height: 35px;
+    text-align: center;
+    line-height: 33px;
+    font-size: 20px;
+    display: inline-block;
+    color: white;
+    margin: 0 5px;
+    transition: 0.2s;
+    border-radius: 2px;
+    cursor: pointer;
+    font-family: Helvetica, Sans-Serif;
+}
+
+
+/*
+.container .card .contentBx .color span:nth-child(2) {
+    background: #9bdc28;
+}
+
+.container .card .contentBx .color span:nth-child(3) {
+    background: #03a9f4;
+}
+
+.container .card .contentBx .color span:nth-child(4) {
+    background: #e91e63;
+}
+*/
+
+.cart-container .card .contentBx a, .container-puma .card .contentBx a, .cart-container-nike .card .contentBx a, .cart-container-adidas .card .contentBx a, .container .card .contentBx a {
+    display: inline-block;
+    padding: 7px 10px;
+    background: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #111;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.2s;
+    margin-top: 0px;
+}
+
+.cart-container .card:hover .contentBx a, .container-puma .card:hover .contentBx a, .cart-container-nike .card:hover .contentBx a, .cart-container-adidas .card:hover .contentBx a, .container .card:hover .contentBx a {
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: 0.2s;
+}
+
+.cart-container .card .contentBx a:hover, .container-puma .card .contentBx a:hover, .cart-container-nike .card .contentBx a:hover, .cart-container-adidas .card .contentBx a:hover, .container .card .contentBx a:hover {
+    background: #9bdc28;
+    transition-delay: 0s;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 66px;
+    margin-right: 1%;
+}
+
+/*------------------------------------------------------------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.footer-container {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer {
+    background-color: #24262b;
+    padding: 20px 0;
+    height: 12em;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #ffffff;
+    display: block;
+    transition: all 0.3s ease;
+    width: 120px;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgb(255, 255, 255);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+/*responsive*/
+@media (max-width: 767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 574px) {
+    .footer-col {
+        width: 100%;
+    }
+}
+
+/*--------------------------------------------------------------*/
+
+.menu-bar {
+    float: left;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    height: 55px;
+    margin-left: 10px;
+}
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
+
+/* Mini reset, no margins, paddings or bullets */
+.menu,
+.submenu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Main level */
+.menu {
+    margin: 0 auto;
+    width: 800px;
+    /* http://www.red-team-design.com/horizontal-centering-using-css-fit-content-value */
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+.menu > li {
+    background: #bce1ef;
+    float: left;
+    position: relative;
+    transform: skewX(25deg);
+}
+
+.menu a {
+    display: block;
+    color: #1e0505;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: Helvetica, Sans-Serif;
+    font-size: 15.8px;
+}
+
+.menu li:hover {
+    background: #5b7298;
+}
+
+.menu > li > a {
+    transform: skewX(-25deg);
+    padding: 1em 2em;
+}
+
+/* Dropdown */
+.submenu {
+    position: absolute;
+    width: 200px;
+    left: 50%;
+    margin-left: -100px;
+    transform: skewX(-25deg);
+    transform-origin: left top;
+}
+
+.submenu li {
+    background-color: #9ec0e5;
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+
+.submenu > li > a {
+    padding: 1em 2em;
+}
+
+.submenu > li::after {
+    content: '';
+    position: absolute;
+    top: -125%;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 0 50px rgba(0, 0, 0, .9);
+}
+
+/* Odd stuff */
+.submenu > li:nth-child(odd) {
+    transform: skewX(-25deg) translateX(0);
+}
+
+.submenu > li:nth-child(odd) > a {
+    transform: skewX(25deg);
+}
+
+.submenu > li:nth-child(odd)::after {
+    right: -50%;
+    transform: skewX(-25deg) rotate(3deg);
+}
+
+/* Even stuff */
+.submenu > li:nth-child(even) {
+    transform: skewX(25deg) translateX(0);
+}
+
+.submenu > li:nth-child(even) > a {
+    transform: skewX(-25deg);
+}
+
+.submenu > li:nth-child(even)::after {
+    left: -50%;
+    transform: skewX(25deg) rotate(3deg);
+}
+
+/* Show dropdown */
+.submenu,
+.submenu li {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.submenu li {
+    transition: .2s ease transform;
+}
+
+.menu > li:hover .submenu,
+.menu > li:hover .submenu li {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu > li:hover .submenu li:nth-child(even) {
+    transform: skewX(25deg) translateX(15px);
+}
+
+.menu > li:hover .submenu li:nth-child(odd) {
+    transform: skewX(-25deg) translateX(-15px);
+}
+
+/*------------------------------------------------------------------------------*/
+
+#nav-container {
+    position: absolute;
+    width: 100%;
+    pointer-events: none;
+    z-index: 99;
+    height: 80px;
+}
+
+body {
+    margin: 0;
+    font-family: Helvetica, Sans-Serif;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: rgba(141, 213, 194, 0.24);
+    height: 80px;
+    border-color: rgb(244, 253, 253);
+    border-bottom: solid;
+    border-bottom-color: #accbd0;
+}
+
+.topnav-2 {
+    overflow: visible;
+    background-color: rgba(121, 215, 190, 0.24);
+    height: 52px;
+    border: none;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    background-color: #ddf2ec;
+    /*
+    border-color: rgba(207, 231, 231, 0.26);
+    */
+    margin-bottom: 0;
+}
+
+.signIn_box a, .registration_box a {
+    float: left;
+    display: block;
+    color: #ece9e3;
+    text-align: center;
+    text-decoration: none;
+    padding-left: 16px;
+    padding-top: 20px;
+    font-size: 25px;
+}
+
+
+.heading {
+    float: left;
+    color: #000000;
+    text-decoration: none;
+    font-size: 28px;
+    display: block;
+    font-weight: 500;
+    margin-left: 1%;
+    font-family: Georgia, arial, serif;
+    margin-top: 25px;
+    text-transform: uppercase;
+}
+
+.signIn_box a, .registration_box a:hover {
+    background-color: #ddd;
+    color: black;
+    border-radius: 15%;
+}
+
+
+.signIn_box a, .registration_box a.active {
+    background-color: #2196F3;
+    color: white;
+}
+
+#nav-container .bg {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 80px);
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+    background: #000;
+}
+
+
+#nav-container:focus-within .bg {
+    visibility: visible;
+    opacity: .6;
+}
+
+#nav-container * {
+    visibility: hidden;
+}
+
+.button {
+    visibility: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+    -webkit-appearance: none;
+    border: 0;
+    background: transparent;
+    border-radius: 0;
+    height: 60px;
+    width: 30px;
+    cursor: pointer;
+    pointer-events: auto;
+    margin-left: 25px;
+    margin-top: 15px;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.icon-bar {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #aaa;
+    transition: .3s;
+}
+
+.icon-bar + .icon-bar {
+    margin-top: 5px;
+}
+
+#nav-container:focus-within .button {
+    pointer-events: none;
+}
+
+#nav-container:focus-within .icon-bar:nth-of-type(1) {
+    transform: translate3d(0, 8px, 0) rotate(45deg);
+}
+
+#nav-container:focus-within .icon-bar:nth-of-type(2) {
+    opacity: 0;
+}
+
+#nav-container:focus-within .icon-bar:nth-of-type(3) {
+    transform: translate3d(0, -8px, 0) rotate(-45deg);
+}
+
+#nav-content {
+    margin-top: 5px;
+    padding: 20px;
+    width: 90%;
+    max-width: 300px;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background: #ececec;
+    pointer-events: auto;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    transform: translateX(-100%);
+    transition: transform .3s;
+    will-change: transform;
+    contain: paint;
+}
+
+#nav-content ul {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#nav-content li a {
+    padding: 10px 5px;
+    display: block;
+    text-transform: uppercase;
+    transition: color .1s;
+}
+
+#nav-content li a:hover {
+    color: #3b809a;
+}
+
+#nav-content li:not(.small) + .small {
+    margin-top: auto;
+}
+
+.small {
+    display: flex;
+    align-self: center;
+}
+
+.small a {
+    font-size: 12px;
+    font-weight: 400;
+    color: #888;
+}
+
+.small a + a {
+    margin-left: 15px;
+}
+
+#nav-container:focus-within #nav-content {
+    transform: none;
+}
+
+
+img {
+    vertical-align: middle;
+    height: auto;
+    width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+#welcome {
+    display: flex;
+    justify-content: center;
+}
+
+.signIn_box {
+    color: #1e1b1b;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    font-family: Helvetica, Sans-Serif;;
+    height: 40px;
+    background-color: #c2daf3;
+    width: 90px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 8%;
+    border: none;
+    border-radius: 10%;
+    border-color: #c3bfca;
+}
+
+.signIn_box:hover {
+    background-color: #8db0d3;
+}
+
+.registration_box {
+    color: #efe9e3;
+    text-decoration: none;
+    font-size: 21px;
+    display: block;
+    margin-right: 2%;
+    font-family: Helvetica, Sans-Serif;;
+    height: 40px;
+    background-color: #1e527f;
+    width: 140px;
+    padding-left: 2px;
+    padding-top: 2px;
+    border: none;
+    border-radius: 4%;
+    border-color: #c3bfca;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.registration_box:hover {
+    background-color: #5283ab;
+}
+
+.my-account {
+    color: #494942;
+    text-decoration: none;
+    font-size: 21px;
+    display: block;
+    margin-right: 2%;
+    font-family: Helvetica, Sans-Serif;;
+    height: 40px;
+    padding-left: 2px;
+    padding-top: 2px;
+    border: none;
+    border-radius: 8%;
+    cursor: pointer;
+    margin-top: 20px;
+    background-color: rgb(203 217 240);
+    margin-left: 10%;
+    width: 85px;
+}
+
+.my-account:hover {
+    background-color: rgb(111 157 233);
+    color: #232222;
+}
+
+.login {
+    display: flex;
+    float: right;
+    width: 270px;
+    justify-content: space-around;
+    margin-right: 11px;
+}
+
+
+/*---------------------------------------------------------------------------------------------*/
+
+.topnav-2 .search-container {
+    float: right;
+    height: 40px;
+    display: flex;
+    margin-top: 0px;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.topnav-2 input[type=text] {
+    padding: 6px;
+    margin-top: 5px;
+    font-size: 18px;
+    border: solid;
+    border-color: #bcbcda;
+    width: 200px;
+    font-family: Helvetica, Sans-Serif;
+}
+
+.topnav-2 input, textarea {
+    outline: none;
+    border: none;
+}
+
+.topnav-2 .search-container .search_button {
+    float: right;
+    padding: 3.5px 5px;
+    margin-top: 6.5px;
+    margin-right: 16px;
+    background: #f1dbb8;
+    font-size: 17px;
+    border-color: white;
+    cursor: pointer;
+    border-radius: 20%;
+}
+
+#s-btn {
+    background: transparent;
+}
+
+#s-btn:active {
+    transform: scale(0.9);
+}
+
+#search {
+    padding-right: 45px;
+}
+
+.topnav-2 .search-container .search_button:hover {
+    background: #eee7e7;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav-2 .search-container {
+        float: none;
+    }
+
+    .topnav a, .topnav-2 input[type=text], .topnav-2 .search-container button {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+    }
+
+    .topnav-2 input[type=text] {
+        border: 1px solid #ccc;
+    }
+}
+
+/*#search_icon {
+    display: block;
+    height: 27.6px;
+    width: 26px;
+}*/
+
+.action_pg {
+    border-radius: 15%;
+}
+
+
+/*----------------------------------------------------------------------------*/
+
+#bg_signin {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+
+}
+
+.signin_title {
+    text-align: center;
+    margin: 15px auto;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 15px;
+}
+
+/*-------------------------------------------------------------------------------------*/
+
+.slider {
+    max-width: 100%;
+    position: relative;
+    height: 580px;
+    border: none;
+    border-color: #9db0d3;
+    border-width: 1px;
+    z-index: 0;
+}
+
+.slider .item img {
+    object-fit: cover;
+    width: 100%;
+    height: 580px;
+    opacity: 0.9;
+    box-shadow: 0 0 5em -2em #6c5b5b;
+    border-bottom: solid;
+    border-width: 2px;
+    border-color: #bfcfd5;
+}
+
+.slider .item-2 img {
+    object-fit: cover;
+    width: 90%;
+    height: 320px;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 0 5em -1em black;
+    opacity: 0.9;
+}
+
+.slider .previous, .slider .next {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+.slider .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.slider .previous:hover,
+.slider .next:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.slider .item {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.slider .item-2 {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.container-heading {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-size: 50px;
+    font-family: Helvetica, Sans-Serif;
+}
+
+.container-hr1 {
+    width: 70%;
+    margin-top: 50px;
+}
+
+.container-hr2 {
+    width: 80%;
+}
+
+/*--------------------------------------------------------------------------------------------*/
+
+.sneakers {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-size: 50px;
+    font-family: Brush Script MT, Brush Script Std;
+    margin-top: 0px;
+    height: 110px;
+    padding-top: 50px;
+}
+
+
+/* Sign ----------------------------------------------------------------------------*/
+
+#bg_signin {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+
+}
+
+.signin_module {
+    display: block;
+    margin: 150px auto;
+    position: relative;
+    height: 445px;
+    width: 450px;
+    background-color: white;
+    border: none;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.signin_title {
+    text-align: center;
+    margin: 15px auto;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 15px;
+}
+
+/* Registration -------------------------------------------------------------------*/
+
+.registerbtn {
+    background-color: #a41e1e;
+    color: white;
+    padding: 16px 20px;
+    margin: auto 0;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    font-size: 16px;
+}
+
+.registerbtn:hover {
+    background: rgba(173, 51, 51, 0.7);
+}
+
+
+.create_new_password {
+    color: #0022ff;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.forget_password {
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.create_new_password:hover {
+    color: rgba(0, 72, 255, 0.87);
+}
+
+#signin_close {
+    margin-top: 1px;
+    margin-right: 2px;
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    color: red;
+    border: none;
+    background-color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#signin_close:hover {
+    color: rgba(255, 0, 0, 0.66);
+}
+
+@media (max-width: 800px) {
+
+    .signin_module {
+        width: 350px;
+        padding: 17px;
+    }
+}
+
+@media (max-width: 490px) {
+    .signin_module {
+        width: 270px;
+        padding: 17px;
+    }
+}
+
+#bg_reg {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 99999999999;
+}
+
+.module {
+    display: block;
+    margin: 80px auto;
+    position: relative;
+    height: 555px;
+    width: 450px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.terms {
+    font-size: 10px;
+}
+
+#reg_close {
+    margin-top: 1px;
+    margin-right: 2px;
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    color: red;
+    border: none;
+    background-color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#reg_close:hover {
+    color: rgba(255, 0, 0, 0.66);
+}
+
+
+@media (max-width: 800px) {
+
+    .module {
+        width: 350px;
+        padding: 17px;
+    }
+
+}
+
+@media (max-width: 490px) {
+    .module {
+        width: 270px;
+        padding: 17px;
+    }
+}
+
+.basket-logout {
+    margin-left: 50%;
+    display: flex;
+    width: 150px;
+}
+
+#basket-icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin-top: 24px;
+    transition: 200ms;
+}
+
+#basket-icon:hover {
+    transform: scale(1.1);
+}
+
+/*--------------------------------------------------------------------------------  */
+
+.card-section {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card-new {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 250px;
+    height: 410px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    transition: 200ms;
+}
+
+.card-new:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.card-new .price {
+    color: grey;
+    font-size: 22px;
+}
+
+.card-new h1 {
+    font-size: 22px;
+}
+
+.card-new button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.card-new button:hover {
+    opacity: 0.7;
+}
+
+/*----------------------------------------------------------*/
+
+.category-menu {
+    margin: 0 auto;
+    /* http://www.red-team-design.com/horizontal-centering-using-css-fit-content-value */
+    width: -moz-fit-content;
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+}
+
+
+.category-menu > li {
+    background: #ffffff;
+    position: relative;
+    font-size: 35px;
+    width: 400px;
+    border: outset;
+    border-width: 3px;
+    text-align: center;
+}
+
+.category-menu .nike {
+    background-color: #afe3b2
+}
+
+.category-menu .nike:hover {
+    background-color: #94e798
+}
+
+.category-menu .adidas {
+    background-color: #adc1d0
+}
+
+.category-menu .adidas:hover {
+    background-color: #789eaf
+}
+
+.category-menu .puma {
+    background-color: #e3d7af
+}
+
+.category-menu .puma:hover {
+    background-color: #bec978
+}
+
+.category-menu .skechers {
+    background-color: #c2afe3
+}
+
+.category-menu .skechers:hover {
+    background-color: #9a84c2
+}
+
+
+.category-menu > li:hover {
+    background: #426b85;
+    position: relative;
+    font-size: 35px;
+    width: 400px;
+    border-width: 3px;
+    border-color: #8ca4ad;
+    cursor: pointer;
+}
+
+/*
+.category-list{
+    margin-top: 50px;
+}*/
+
+.news {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    width: 60%;
+    margin: 40px auto;
+    background-color: rgba(236, 240, 243, 0.2);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 0 0 5em -2em rgba(0, 0, 0, 0.23);
+}
+
+@media (max-width: 1000px) {
+
+    .news {
+        position: relative;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+        width: 60%;
+        margin: 40px auto;
+        background-color: rgba(236, 240, 243, 0.2);
+        padding-top: 20px;
+        padding-bottom: 20px;
+        box-shadow: 0 0 5em -2em rgba(0, 0, 0, 0.23);
+    }
+
+}
+
+.card-new.hide {
+    display: none;
+}
+
+.news-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.news-card a {
+    font-family: Helvetica, Sans-Serif;
+    font-size: 21px;
+}
+
+.news-card img {
+    width: 460px;
+    height: 380px;
+}
+
+.profile {
+    position: relative;
+    background-color: white;
+    z-index: 10000;
+    top: 10px;
+    left: 57px;
+    width: 141px;
+    height: 100px;
+    font-size: 13px;
+    padding-top: 10px;
+    padding-left: 5px;
+    border-radius: 4%;
+    display: none;
+}
+
+.profile a {
+
+}
+

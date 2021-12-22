@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create size table
+      author: Abbas
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                  autoIncrement: true
+              - column:
+                  name: product_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: product_id
+                    nullable: false
+                    references: product(id)
+              - column:
+                  name: value
+                  type: bigint
+                  constraints:
+                    nullable: false
+            schemaName: public
+            tableName: size

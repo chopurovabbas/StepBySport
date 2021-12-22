@@ -1,0 +1,40 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create product table
+      author: Abbas
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    autoIncrement: true
+              - column:
+                  name: name
+                  type: varchar(64)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: price
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - column:
+                  name: image_url
+                  type: varchar(256)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: collection
+                  type: varchar(64)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: model
+                  type: varchar(64)
+                  constraints:
+                    nullable: false
+            schemaName: public
+            tableName: product

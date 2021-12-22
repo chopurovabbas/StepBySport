@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css?family=Muli');
+
+.card h1 {
+    color: #f1dbb8;
+    font-family: "muli";
+    font-weight: bold;
+    font-size: 22px;
+    margin-top: 21px;
+    display: inline-block;
+}
+
+.card i.fa.fa-search {
+    margin-left: 90px;
+}
+
+.product-name i {
+    color: #ffffff;
+    transition: 0.3s all ease;
+    margin: 0px 12px;
+}
+
+.product-name i:hover {
+    color: #ff6d39;
+    cursor: pointer;
+}
+
+.card h3 {
+    color: #ffffff;
+    font-family: "muli";
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 125px;
+}
+
+.card h2 {
+    color: #ffffff;
+    font-family: "muli";
+    margin-top: 10px;
+    font-weight: 800;
+    font-size: 29px;
+}
+
+.card h4 {
+    display: inline-block;
+    color: #ffffff;
+    font-family: "muli";
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.card h4.dis {
+    display: inline-block;
+    color: #ffffff;
+    font-family: "muli";
+    font-weight: 400;
+    font-size: 17px;
+    margin-left: 30px;
+}
+
+h4.dis span {
+    text-decoration: line-through #ea3201;
+}
+
+.discount {
+    display: inline-block;
+}
+
+.card ul {
+    list-style-type: none;
+}
+
+.card li {
+    display: inline-block;
+    margin-right: 25px;
+}
+
+.card ul li {
+    color: #ffffff;
+    font-family: "muli";
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card .bg {
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    padding: 2px;
+    margin-right: 20px;
+    transition: 0.3s all ease;
+    border-radius: 50%;
+}
+
+.bg:hover {
+    background-color: #ff6d39;
+    border-radius: 50%;
+    width: 23px;
+    height: 23px;
+    cursor: pointer;
+}
+
+.foot {
+    color: #ffffff;
+    font-family: "muli";
+    font-weight: bold;
+    margin-top: 40%;
+    margin-right: 40px;
+    font-size: 20px;
+    float: right;
+    transition: 0.3s all ease;
+}
+
+.foot i:nth-child(1) {
+    margin-left: 0;
+    margin-right: 15px;
+}
+
+.foot:hover {
+    color: #f76b39;
+    cursor: pointer;
+}
+
+/*shoe slider indicator*/
+
+.left i {
+    color: #ffd5c6;
+    margin-top: 260px;
+    transition: 0.3s all ease;
+}
+
+.fa-long-arrow-left {
+    margin-left: -275px;
+}
+
+.fa-long-arrow-right {
+    margin-left: 15px;
+}
+
+.left i:hover {
+    cursor: pointer;
+    color: #2a2f40;
+}
+
+/*main card*/
+
+.card {
+    display: flex;
+    align-items: center;
+    height: 600px;
+    width: 800px;
+    margin: 0 auto;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    margin-top: 2%;
+}
+
+.left {
+    height: 500px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    background-color: #f6f6f6;
+    margin-left: 0px;
+    position: absolute;
+    z-index: 5;
+}
+
+.left img {
+    height: 503px;
+}
+
+.right {
+    content: "";
+    height: 500px;
+    width: 650px;
+    background-color: #303a5d;
+    z-index: 3;
+    margin-left: 200px;
+}
+
+.product-info {
+    position: absolute;
+    margin-left: 245px;
+    height: 394px;
+    width: 305px;
+    z-index: 10;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    min-height: 40em;
+}
+
+.card ul{
+    padding: 0;
+}
+

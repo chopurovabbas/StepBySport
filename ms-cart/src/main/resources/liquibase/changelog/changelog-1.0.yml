@@ -1,0 +1,26 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create cart table
+      author: Abbas
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                  autoIncrement: true
+              - column:
+                  name: username
+                  type: varchar(64)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: product_name
+                  type: varchar(64)
+                  constraints:
+                    nullable: false
+                    unique: true
+            schemaName: public
+            tableName: cart
